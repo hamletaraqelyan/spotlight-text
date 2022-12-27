@@ -9,15 +9,16 @@ main {
     width: 100%;
     height: 100vh;
     background-color: #060910;
+    overflow: hidden;
+    font-family: 'Jost', sans-serif;
 }
 
-main p{
+main p {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25rem;
-    font-family: 'Jost', sans-serif;
     font-weight: 600;
     letter-spacing: 20px;
     color: #274e6f;
@@ -29,4 +30,42 @@ main p{
     height: 100%;
     will-change: background;
     background: radial-gradient(circle at 0px 0px, transparent, rgb(6 9 16 / 90%) 35%);
+}
+
+.mobilePopup {
+    display: none;
+}
+
+@media(max-width: 1024px) {
+    .mobilePopup {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font-size: 2rem;
+        background-color: #060910;
+        color: #468cc1;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .mobilePopup.show {
+        display: flex;
+        font-size: 3rem;
+        padding: 0 5rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .mobilePopup.show {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .mobilePopup.show {
+        padding: 0 3rem;
+        font-size: 1.5rem;
+    }
 }
