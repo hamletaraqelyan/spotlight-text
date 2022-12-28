@@ -29,7 +29,7 @@ main p {
     width: 100%;
     height: 100%;
     will-change: background;
-    background: radial-gradient(circle at 0px 0px, transparent, rgb(6 9 16 / 90%) 35%);
+    background: radial-gradient(circle at 0px 0px, transparent, rgb(6 9 16 / 95%) 35%);
 }
 
 .mobilePopup {
